@@ -18,8 +18,4 @@ public class MailController {
         return  this.mailProcessingService.sendMail(mailRequestBody.getName(),mailRequestBody.getEmail());
     }
 
-    @GetMapping("/montu")
-    public  String get(){
-        return  "test";
-    }
 }
