@@ -26,6 +26,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Properties;
 
 @Service
@@ -47,8 +48,9 @@ public class MailProcessingService {
 
     public ResponseEntity sendMail(String name, String email){
         try{
-            SimpleMailMessage message =  getMessage(name,email);
+            MimeMessage message = getMimeMessage(name,email);
             this.javaMailSender.send(message);
+
         }
         catch (Exception exception){
             exception.printStackTrace();
@@ -69,23 +71,16 @@ public class MailProcessingService {
     }
 
     private MimeMessage getMimeMessage(String name,String email) throws IOException, MessagingException {
-        Properties props = new Properties();
-        String host = "smtp-relay.brevo.com";
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "587");
-        Session session = Session.getInstance(props,
-                new jakarta.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("ms346k@gmail.com", "tL89pER2KnfATjzw");
-                    }
-                });
-        MimeMessage mimeMessage = new MimeMessage(session);
-        mimeMessage.setRecipients(Message.RecipientType.TO,InternetAddress.parse(email));
-        mimeMessage.setSender(new InternetAddress("AnandSinghYadav@asy.com"));
-        mimeMessage.setSubject("Assignment Submission");
-        mimeMessage.setContent(applicationService.get(name),"test/html");
+        Multipart multipart = new MimeMultipart();
+        MimeBodyPart bodyPart = new MimeBodyPart();
+        jakarta.mail.internet.MimeMessage mimeMessage = this.javaMailSender.createMimeMessage();
+        mimeMessage.setFrom(new InternetAddress("anandyadav2332@gmail.com","Anand Singh Yadav"));
+        mimeMessage.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(email,name)});
+        mimeMessage.setSubject("Message from Instructor - Assignment Submission");
+        mimeMessage.setReplyTo(new InternetAddress[]{new InternetAddress("anandyadav2332@gmail.com","Anand Singh Yadav")});
+        bodyPart.setContent(applicationService.get(name),"text/html");
+        multipart.addBodyPart(bodyPart);
+        mimeMessage.setContent(multipart);
         return mimeMessage;
     }
 }

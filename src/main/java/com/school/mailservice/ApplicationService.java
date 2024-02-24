@@ -15,7 +15,7 @@ public class ApplicationService {
     public String get(String name){
         Context context = new Context();
         context.setVariable("studentName",name);
-        String mailString = springTemplateEngine.process("index",context);
+        String mailString = springTemplateEngine.process("new-email",context);
         return  mailString;
     }
 }
