@@ -17,4 +17,9 @@ public class MailController {
     public ResponseEntity sendMail(@RequestBody MailRequestBody mailRequestBody){
         return  this.mailProcessingService.sendMail(mailRequestBody.getName(),mailRequestBody.getEmail());
     }
+
+    @GetMapping("/montu")
+    public  String get(){
+        return  "test";
+    }
 }
