@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+	<style>
+        /* Define your styles here */
+        * {
+			box-sizing: border-box;
+		}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+	<div class="header">
+		<h1>Assignment Submission</h1>
+	</div>
+	<div class="content">
+		<p>Dear <span th:text="${studentName}"></span>,</p>
+		<p>Your assignment has been successfully submitted.</p>
+		<p>Thank you for your submission!</p>
+	</div>
+	<div class="footer">
+		<p>Copyright &copy; 2024 ASY Assignment Submission</p>
+	</div>
+	</body>
+</html>

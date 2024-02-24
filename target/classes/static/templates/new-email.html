@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Mail Greeting</title>
+</head>
+<body>
+<h1 th:text="'Hello, ' + ${recipientName} + '!'">Hello, [name]!</h1>
+<p>This is a greeting email generated using Thymeleaf.</p>
+</body>
+</html>

@@ -1,0 +1,6 @@
+com\school\mailservice\ApplicationService.class
+com\school\mailservice\MailRequestBody.class
+com\school\mailservice\MailserviceApplication.class
+com\school\mailservice\ApplicationConfiguration.class
+com\school\mailservice\MailController.class
+com\school\mailservice\MailProcessingService.class
