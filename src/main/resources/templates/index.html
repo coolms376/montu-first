@@ -1,335 +1,625 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+
 <head>
-<!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="x-apple-disable-message-reformatting">
-  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-  <title></title>
-  
-    <style type="text/css">
-      @media only screen and (min-width: 570px) {
-  .u-row {
-    width: 550px !important;
-  }
-  .u-row .u-col {
-    vertical-align: top;
-  }
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title></title>
+    <style emogrify="no" type="text/css">
+        #outlook a {
+            padding: 0;
+        }
 
-  .u-row .u-col-100 {
-    width: 550px !important;
-  }
+        .ExternalClass {
+            width: 100%;
+        }
 
-}
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
 
-@media (max-width: 570px) {
-  .u-row-container {
-    max-width: 100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  .u-row .u-col {
-    min-width: 320px !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-  .u-row {
-    width: 100% !important;
-  }
-  .u-col {
-    width: 100% !important;
-  }
-  .u-col > div {
-    margin: 0 auto;
-  }
-}
-body {
-  margin: 0;
-  padding: 0;
-}
+        table td {
+            border-collapse: collapse;
+            mso-line-height-rule: exactly;
+        }
 
-table,
-tr,
-td {
-  vertical-align: top;
-  border-collapse: collapse;
-}
+        .editable.image {
+            font-size: 0 !important;
+            line-height: 0 !important;
+        }
 
-p {
-  margin: 0;
-}
+        .nl2go_preheader {
+            display: none !important;
+            mso-hide: all !important;
+            mso-line-height-rule: exactly;
+            visibility: hidden !important;
+            line-height: 0px !important;
+            font-size: 0px !important;
+        }
 
-.ie-container table,
-.mso-container table {
-  table-layout: fixed;
-}
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-* {
-  line-height: inherit;
-}
+        img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
 
-a[x-apple-data-detectors='true'] {
-  color: inherit !important;
-  text-decoration: none !important;
-}
+        a img {
+            border: none;
+        }
 
-table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; } #u_content_text_10 a { color: #ffffff; } @media (max-width: 480px) { #u_content_image_2 .v-src-width { width: auto !important; } #u_content_image_2 .v-src-max-width { max-width: 42% !important; } }
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        th {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        *[class="gmail-fix"] {
+            display: none !important;
+        }
     </style>
-  
-  
+    <style emogrify="no" type="text/css">
+        @media (max-width: 600px) {
+            .gmx-killpill {
+                content: ' \03D1';
+            }
+        }
+    </style>
+    <style emogrify="no" type="text/css">
+        @media (max-width: 600px) {
+            .gmx-killpill {
+                content: ' \03D1';
+            }
 
-<!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet" type="text/css"><!--<![endif]-->
+            .r0-o {
+                border-style: solid !important;
+                margin: 0 auto 0 auto !important;
+                width: 100% !important
+            }
 
+            .r1-i {
+                background-color: transparent !important
+            }
+
+            .r2-c {
+                box-sizing: border-box !important;
+                text-align: center !important;
+                valign: top !important;
+                width: 320px !important
+            }
+
+            .r3-o {
+                border-style: solid !important;
+                margin: 0 auto 0 auto !important;
+                width: 320px !important
+            }
+
+            .r4-i {
+                padding-bottom: 5px !important;
+                padding-top: 5px !important
+            }
+
+            .r5-c {
+                box-sizing: border-box !important;
+                display: block !important;
+                valign: top !important;
+                width: 100% !important
+            }
+
+            .r6-o {
+                border-style: solid !important;
+                width: 100% !important
+            }
+
+            .r7-i {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                padding-top: 20px !important;
+                text-align: center !important
+            }
+
+            .r8-i {
+                background-color: #9c71f0 !important
+            }
+
+            .r9-c {
+                box-sizing: border-box !important;
+                text-align: center !important;
+                valign: top !important;
+                width: 100% !important
+            }
+
+            .r10-i {
+                background-color: #ffffff !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                padding-top: 76px !important
+            }
+
+            .r11-o {
+                border-style: solid !important;
+                margin: 0 auto 0 0 !important;
+                margin-bottom: 0px !important;
+                margin-top: 0px !important;
+                width: 100% !important
+            }
+
+            .r12-i {
+                text-align: left !important
+            }
+
+            .r13-o {
+                border-style: solid !important;
+                margin: 0 auto 0 0 !important;
+                width: 100% !important
+            }
+
+            .r14-i {
+                padding-top: 15px !important;
+                text-align: left !important
+            }
+
+            .r15-i {
+                background-color: #ffffff !important;
+                padding-bottom: 70px !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                padding-top: 45px !important
+            }
+
+            .r16-i {
+                background-color: #ffffff !important;
+                padding-left: 0px !important;
+                padding-right: 0px !important
+            }
+
+            .r17-c {
+                box-sizing: border-box !important;
+                text-align: right !important;
+                valign: top !important;
+                width: 100% !important
+            }
+
+            .r18-o {
+                border-style: solid !important;
+                margin: 0 0 0 auto !important;
+                width: 100% !important
+            }
+
+            .r19-i {
+                padding-top: 30px !important
+            }
+
+            .r20-i {
+                background-color: #121212 !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                padding-top: 48px !important
+            }
+
+            .r21-i {
+                text-align: center !important
+            }
+
+            body {
+                -webkit-text-size-adjust: none
+            }
+
+            .nl2go-responsive-hide {
+                display: none
+            }
+
+            .nl2go-body-table {
+                min-width: unset !important
+            }
+
+            .mobshow {
+                height: auto !important;
+                overflow: visible !important;
+                max-height: unset !important;
+                visibility: visible !important;
+                border: none !important
+            }
+
+            .resp-table {
+                display: inline-table !important
+            }
+
+            .magic-resp {
+                display: table-cell !important
+            }
+        }
+    </style><!--[if !mso]><!-->
+    <style emogrify="no" type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat");
+    </style><!--<![endif]-->
+    <style type="text/css">
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        ol,
+        ul,
+        li {
+            margin: 0;
+        }
+
+
+        .nl2go-default-textstyle {
+            color: #3b3f44;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.2;
+            word-break: break-word
+        }
+
+        .default-button {
+            color: #3b3f44;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.15;
+            text-decoration: none;
+            word-break: break-word
+        }
+
+        .sib_class_16_white_roboto {
+            color: #FFFFFF;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            word-break: break-word
+        }
+
+        .sib_class_16_black {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            word-break: break-word
+        }
+
+        .sib_class_16_white {
+            color: #ffffff;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            word-break: break-word
+        }
+
+        .sib_class_16_black_sb {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            word-break: break-word
+        }
+
+        .sib_class_16_black_b {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            word-break: break-word
+        }
+
+        .sib_class_18_black_sb {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            word-break: break-word
+        }
+
+        .sib_class_18_blue_sb {
+            color: #75EBEF;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            word-break: break-word
+        }
+
+        .sib_class_20_black_roboto {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            word-break: break-word
+        }
+
+        .sib_class_20_black_b {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            word-break: break-word
+        }
+
+        .sib_class_20_black_b_ul {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: underline;
+            word-break: break-word
+        }
+
+        .sib_class_20_white_b_ul {
+            color: #ffffff;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: underline;
+            word-break: break-word
+        }
+
+        .sib_class_24_black_b {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            word-break: break-word
+        }
+
+        .sib_class_30_black_sb {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            word-break: break-word
+        }
+
+        .default-heading1 {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 30px;
+            word-break: break-word
+        }
+
+        .default-heading2 {
+            color: #ffffff;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            word-break: break-word
+        }
+
+        .default-heading3 {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 20px;
+            word-break: break-word
+        }
+
+        .default-heading4 {
+            color: #000000;
+            font-family: Montserrat, arial, helvetica, sans-serif;
+            font-size: 18px;
+            word-break: break-word
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: inherit !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .no-show-for-you {
+            border: none;
+            display: none;
+            float: none;
+            font-size: 0;
+            height: 0;
+            line-height: 0;
+            max-height: 0;
+            mso-hide: all;
+            overflow: hidden;
+            table-layout: fixed;
+            visibility: hidden;
+            width: 0;
+        }
+    </style>
+    <!--[if mso]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+    <style type="text/css">
+        a:link {
+            color: #9c71f0;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
-<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000">
-  <!--[if IE]><div class="ie-container"><![endif]-->
-  <!--[if mso]><div class="mso-container"><![endif]-->
-  <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%" cellpadding="0" cellspacing="0">
-  <tbody>
-  <tr style="vertical-align: top">
-    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #ffffff;"><![endif]-->
-    
-  
-  
-<div class="u-row-container" style="padding: 0px;background-color: transparent">
-  <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #51a60d;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:550px;"><tr style="background-color: #51a60d;"><![endif]-->
-      
-<!--[if (mso)|(IE)]><td align="center" width="550" style="width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 550px;display: table-cell;vertical-align: top;">
-  <div style="height: 100%;width: 100% !important;">
-  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
-  
-<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:30px 10px 15px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <!--[if mso]><table width="100%"><tr><td><![endif]-->
-    <h3 style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-family: 'Cabin',sans-serif; font-size: 18px; font-weight: 400;"><span><span><span>ASY</span></span></span></h3>
-  <!--[if mso]></td></tr></table><![endif]-->
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-    </div>
-  </div>
-  </div>
-  
-
-
-  
-  
-<div class="u-row-container" style="padding: 0px;background-color: transparent">
-  <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:550px;"><tr style="background-color: transparent;"><![endif]-->
-      
-<!--[if (mso)|(IE)]><td align="center" width="550" style="background-color: #51a60d;width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 550px;display: table-cell;vertical-align: top;">
-  <div style="background-color: #51a60d;height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
-  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
-  
-<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:1px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 6px solid #ffffff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-    <tbody>
-      <tr style="vertical-align: top">
-        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-          <span>&#160;</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:26px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <div style="font-family: inherit; font-size: 18px; color: #ffffff; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="line-height: 140%;" th:text="${studentName}">Dear [student name],</p>
-<p style="line-height: 140%;">Your assignment submission has been done.</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-    </div>
-  </div>
-  </div>
-  
-
-
-  
-  
-    <!--[if gte mso 9]>
-      <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;min-width: 320px;max-width: 550px;">
+<body bgcolor="#9c71f0" link="#9c71f0"  text="#3b3f44" yahoo="fix">
+    <table border="0" cellpadding="0" cellspacing="0" class="nl2go-body-table" role="presentation"
+       width="100%">
         <tr>
-          <td background="https://cdn.templates.unlayer.com/assets/1620123209967-Untitled1.gif" valign="top" width="100%">
-      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width: 550px;">
-        <v:fill type="frame" src="https://cdn.templates.unlayer.com/assets/1620123209967-Untitled1.gif" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
-      <![endif]-->
-  
-<div class="u-row-container" style="padding: 0px;background-image: url('images/image-1.gif');background-repeat: no-repeat;background-position: center top;background-color: transparent">
-  <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #51a60d;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-image: url('images/image-1.gif');background-repeat: no-repeat;background-position: center top;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:550px;"><tr style="background-color: #51a60d;"><![endif]-->
-      
-<!--[if (mso)|(IE)]><td align="center" width="550" style="width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 550px;display: table-cell;vertical-align: top;">
-  <div style="height: 100%;width: 100% !important;">
-  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
-  
-<table id="u_content_image_2" style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Cabin',sans-serif;" align="left">
-        
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="padding-right: 0px;padding-left: 0px;" align="center">
-      
-      <img align="center" border="0" src="images/image-2.gif" alt="Check" title="Check" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 24%;max-width: 127.2px;" width="127.2" class="v-src-width v-src-max-width"/>
-      
-    </td>
-  </tr>
-</table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table id="u_content_text_10" style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <div style="font-size: 14px; color: #51a60d; line-height: 150%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 150%;"><a href="https://deliveryfy-51eb8.web.app/">Assignment (deliveryfy-51eb8.web.app)</a></p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:1px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 6px solid #ffffff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-    <tbody>
-      <tr style="vertical-align: top">
-        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-          <span>&#160;</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-    </div>
-  </div>
-  </div>
-  
-    <!--[if gte mso 9]>
-      </v:textbox></v:rect>
-    </td>
-    </tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="r0-o" role="presentation"
+                    style="table-layout: fixed; width: 100%;" width="100%">
+                    <tr>
+                        <td class="r1-i" style="background-color: transparent;" valign="top">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="r3-o"
+                                role="presentation" style="table-layout: fixed;" width="600">
+                                <tr>
+                                    <td class="r4-i" style="padding-bottom: 5px; padding-top: 5px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            width="100%">
+                                            <tr>
+                                                <th class="r5-c" style="font-weight: normal;" valign="top" width="100%">
+                                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                        class="r0-o" role="presentation"
+                                                        style="table-layout: fixed; width: 100%;" width="100%">
+                                                        <tr>
+                                                            <td align="center" class="r7-i nl2go-default-textstyle"
+                                                                style="color: #3b3f44; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 16px; line-height: 1.2; word-break: break-word; padding-left: 30px; padding-right: 30px; padding-top: 20px; text-align: center;">
+                                                                <div>
+                                                                    <p style="margin: 0;"><a href="{{ mirror }}"
+                                                                            style="color: #9c71f0; text-decoration: none;"><span
+                                                                                style="color: #ffffff; font-size: 12px;">View
+                                                                                in browser</span></a></p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="r3-o" role="presentation"
+                    style="table-layout: fixed; width: 600px;" width="600">
+                    <tr>
+                        <td class="r8-i" style="background-color: #9c71f0;" valign="top">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="r0-o"
+                                role="presentation" style="table-layout: fixed; width: 100%;" width="100%">
+                                <tr>
+                                    <td class="r10-i"
+                                        style="background-color: #ffffff; padding-left: 35px; padding-right: 35px; padding-top: 76px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            width="100%">
+                                            <tr>
+                                                <th class="r5-c" style="font-weight: normal;" valign="top" width="100%">
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                        class="r11-o" role="presentation"
+                                                        style="table-layout: fixed; width: 100%;" width="100%">
+                                                        <tr>
+                                                            <td align="left" class="r12-i nl2go-default-textstyle"
+                                                                style="color: #3b3f44; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 16px; line-height: 1.2; word-break: break-word; text-align: left;"
+                                                                valign="top">
+                                                                <div>
+                                                                    <h1 class="default-heading1"
+                                                                        style="margin: 0; color: #000; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 30px; word-break: break-word;">
+                                                                        Thank you {},</h1>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                        class="r13-o" role="presentation"
+                                                        style="table-layout: fixed; width: 100%;" width="100%">
+                                                        <tr>
+                                                            <td align="left" class="r14-i nl2go-default-textstyle"
+                                                                style="color: #3b3f44; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 16px; line-height: 1.2; word-break: break-word; padding-top: 15px; text-align: left;"
+                                                                valign="top">
+                                                                <div>
+                                                                    <div class="sib_class_20_black_roboto"
+                                                                        style="color: #000; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 20px; word-break: break-word;">
+                                                                        Your Assignment submission </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="r0-o"
+                                role="presentation" style="table-layout: fixed; width: 100%;" width="100%">
+                                <tr>
+                                    <td class="r15-i"
+                                        style="background-color: #ffffff; padding-bottom: 70px; padding-left: 35px; padding-right: 35px; padding-top: 45px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            width="100%">
+                                            <tr>
+                                                <th class="r5-c" style="background-color: #ffffff; font-weight: normal;"
+                                                    valign="top" width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0" class="r6-o"
+                                                        role="presentation" style="table-layout: fixed; width: 100%;"
+                                                        width="100%">
+                                                        <tr>
+                                                            <td class="r16-i" style="background-color: #ffffff;"
+                                                                valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                    role="presentation" width="100%">
+                                                                    <tr>
+                                                                        <td align="right" class="r17-c">
+                                                                            <table border="0" cellpadding="0"
+                                                                                cellspacing="0" class="r18-o"
+                                                                                role="presentation"
+                                                                                style="table-layout: fixed; width: 238px;"
+                                                                                width="238">
+                                                                                <tr>
+                                                                                    <td class="r19-i"
+                                                                                        style="font-size: 0px; line-height: 0px;">
+                                                                                        <img border="0"
+                                                                                            src="https://img.mailinblue.com/2670624/images/rnb/original/5fbe5418424c336384002ee7.png"
+                                                                                            style="display: block; width: 100%;"
+                                                                                            width="238"></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="r0-o"
+                                role="presentation" style="table-layout: fixed; width: 100%;" width="100%">
+                                <tr>
+                                    <td class="r20-i"
+                                        style="background-color: #121212; padding-left: 35px; padding-right: 35px; padding-top: 48px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            width="100%">
+                                            <tr>
+                                                <th class="r5-c" style="font-weight: normal;" valign="top" width="100%">
+                                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                        class="r0-o" role="presentation"
+                                                        style="table-layout: fixed; width: 100%;" width="100%">
+                                                        <tr>
+                                                            <td align="center" class="r21-i nl2go-default-textstyle"
+                                                                style="color: #3b3f44; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 16px; word-break: break-word; line-height: 2.2; text-align: center;"
+                                                                valign="top">
+                                                                <div>
+                                                                    <div class="sib_class_16_white_roboto"
+                                                                        style="color: #fff; font-family: Montserrat,arial,helvetica,sans-serif; font-size: 16px; word-break: break-word;">
+                                                                        ASY</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
-    <![endif]-->
-    
-
-
-  
-  
-<div class="u-row-container" style="padding: 0px;background-color: transparent">
-  <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 550px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #cbfaa6;">
-    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:550px;"><tr style="background-color: #cbfaa6;"><![endif]-->
-      
-<!--[if (mso)|(IE)]><td align="center" width="550" style="width: 550px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-<div class="u-col u-col-100" style="max-width: 320px;min-width: 550px;display: table-cell;vertical-align: top;">
-  <div style="height: 100%;width: 100% !important;">
-  <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
-  
-<table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Cabin',sans-serif;" align="left">
-        
-  <div>
-    <center>Copyright © 2024 ASY Assignment Submission</center>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-    </div>
-  </div>
-  </div>
-  
-
-
-    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-    </td>
-  </tr>
-  </tbody>
-  </table>
-  <!--[if mso]></div><![endif]-->
-  <!--[if IE]></div><![endif]-->
 </body>
 
 </html>
