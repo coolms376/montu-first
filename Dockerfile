@@ -1,3 +1,4 @@
 FROM openjdk:latest
-RUN mvn package
-CMD ["java","-jar","target/app.jar"]
+COPY /target/app.jar /app/app.jar
+WORKDIR /app/
+CMD ["java","-jar","app.jar"]
