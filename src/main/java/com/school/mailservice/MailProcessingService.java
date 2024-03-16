@@ -59,6 +59,18 @@ public class MailProcessingService {
         return ResponseEntity.ok("Mail Sent succesfully");
     }
 
+    public ResponseEntity sendAssignmentSubmission(String name, String email, String assignmentTitle, String batch){
+        try{
+            MimeMessage message = getAssignmentSubmissionMimeMessage(name,email,assignmentTitle,batch);
+            this.javaMailSender.send(message);
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+            return ResponseEntity.badRequest().body("Error In Sending mail");
+        }
+        return ResponseEntity.ok("Mail Sent succesfully");
+    }
+
 
     private SimpleMailMessage getMessage(String name,String email) throws IOException, URISyntaxException {
         SimpleMailMessage message = new SimpleMailMessage();
@@ -83,4 +95,19 @@ public class MailProcessingService {
         mimeMessage.setContent(multipart);
         return mimeMessage;
     }
+
+    private MimeMessage getAssignmentSubmissionMimeMessage(String name,String email, String assignmentTitle, String batch) throws IOException, MessagingException {
+        Multipart multipart = new MimeMultipart();
+        MimeBodyPart bodyPart = new MimeBodyPart();
+        jakarta.mail.internet.MimeMessage mimeMessage = this.javaMailSender.createMimeMessage();
+        mimeMessage.setFrom(new InternetAddress("anandyadav2332@gmail.com","Anand Singh Yadav"));
+        mimeMessage.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(email,name)});
+        mimeMessage.setSubject("Message from Instructor - Assignment Submission");
+        mimeMessage.setReplyTo(new InternetAddress[]{new InternetAddress("anandyadav2332@gmail.com","Anand Singh Yadav")});
+        bodyPart.setContent(applicationService.getAssignmentSubmission(name,assignmentTitle,batch),"text/html");
+        multipart.addBodyPart(bodyPart);
+        mimeMessage.setContent(multipart);
+        return mimeMessage;
+    }
+
 }

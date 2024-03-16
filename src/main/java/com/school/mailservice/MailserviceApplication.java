@@ -15,6 +15,8 @@ import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
+import java.util.Arrays;
+import java.util.Locale;
 import java.util.Properties;
 
 @SpringBootApplication
@@ -24,6 +26,5 @@ public class MailserviceApplication implements WebMvcConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(MailserviceApplication.class, args);
 	}
-
 
 }
