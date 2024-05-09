@@ -26,8 +26,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.Properties;
+import java.util.*;
 
 @Service
 public class MailProcessingService {
@@ -57,6 +56,24 @@ public class MailProcessingService {
             return ResponseEntity.badRequest().body("Error In Sending mail");
         }
         return ResponseEntity.ok("Mail Sent succesfully");
+    }
+
+    public ResponseEntity sendOTPMail(String name, String email){
+        HashMap<String, Object> response = new HashMap<>();
+
+        try{
+            Random random = new Random();
+            long otp  = random.nextLong(124567l,999999l);
+            response.put("otp", otp);
+            MimeMessage message = getMimeMessageOTP(name,email,otp);
+            this.javaMailSender.send(message);
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+            return ResponseEntity.badRequest().body("Error In Sending mail");
+        }
+        response.put("message","Mail Sent succesfully");
+        return ResponseEntity.ok(response);
     }
 
     public ResponseEntity sendAssignmentSubmission(String name, String email, String assignmentTitle, String batch){
@@ -91,6 +108,20 @@ public class MailProcessingService {
         mimeMessage.setSubject("Message from Instructor - Assignment Submission");
         mimeMessage.setReplyTo(new InternetAddress[]{new InternetAddress("anandyadav2332@gmail.com","Anand Singh Yadav")});
         bodyPart.setContent(applicationService.get(name),"text/html");
+        multipart.addBodyPart(bodyPart);
+        mimeMessage.setContent(multipart);
+        return mimeMessage;
+    }
+
+    private MimeMessage getMimeMessageOTP(String name, String email, long otp) throws IOException, MessagingException {
+        Multipart multipart = new MimeMultipart();
+        MimeBodyPart bodyPart = new MimeBodyPart();
+        jakarta.mail.internet.MimeMessage mimeMessage = this.javaMailSender.createMimeMessage();
+        mimeMessage.setFrom(new InternetAddress("OtpService@gmail.com","OTP Service"));
+        mimeMessage.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(email,name)});
+        mimeMessage.setSubject("Application OTP");
+        mimeMessage.setReplyTo(new InternetAddress[]{new InternetAddress("montusharma376@gmail.com","OTP Service")});
+        bodyPart.setContent(String.format("Your OTP is -  %s",otp),"text/html");
         multipart.addBodyPart(bodyPart);
         mimeMessage.setContent(multipart);
         return mimeMessage;
